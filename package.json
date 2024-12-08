@@ -11,5 +11,9 @@
   "description": "",
   "devDependencies": {
     "cypress": "^13.16.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4"
   }
 }
