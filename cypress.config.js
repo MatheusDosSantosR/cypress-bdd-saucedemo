@@ -5,6 +5,12 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
     e2e: {
+        // Alternatira para conseguir executar todos os testes em modo GUI que por algum motivo esta com bug no cy.visit
+        // https://github.com/cypress-io/cypress/issues/27501
+        watchForFileChanges: false,
+        chromeWebSecurity: false,
+        blockHosts: ["https://events.backtrace.io"],
+
         setupNodeEvents(on, config) {
             const bundler = createBundler({
                 plugins: [createEsbuildPlugin(config)],
