@@ -1,19 +1,18 @@
 {
-  "name": "cypress-bdd-saucedemo",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "cypress": "^13.16.1"
-  },
-  "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4"
-  }
+    "name": "cypress-bdd-saucedemo",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "cypress:open": "cypress open --config baseUrl=https://www.saucedemo.com/",
+        "cypress:run": "cypress run --config baseUrl=https://www.saucedemo.com/"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+        "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+        "cypress": "^13.16.1"
+    }
 }
