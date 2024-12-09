@@ -6,6 +6,10 @@ class CartPage {
     getCartItems() {
         return cy.get('[data-test="inventory-item"]');
     }
+
+    clickCheckoutButton() {
+        cy.get('[data-test="checkout"]').click();
+    }
 }
 
 export default new CartPage();
