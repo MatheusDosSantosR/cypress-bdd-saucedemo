@@ -1,0 +1,42 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Configuração inicial
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22.12.0
+
+    # Instalar dependências
+    - name: Install Dependencies
+      run: npm install
+
+    # Executar os testes do Cypress
+    - name: Run Cypress Tests
+      run: npm run cypress:run
+
+    - name: Merge Mochawesome Report
+      run: npm run report:merge
+
+    - name: Generate HTML Mochawesome Report
+      run: npm run report:html
+
+    # Upload dos resultados
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: cypress-results
+        path: cypress/results/
