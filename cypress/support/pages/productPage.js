@@ -4,7 +4,7 @@ class ProductPage {
     }
 
     getProductItems() {
-        return cy.get(".inventory_item");
+        return cy.get('[data-test="inventory-item"]')
     }
 
     getProductNames() {
@@ -33,6 +33,14 @@ class ProductPage {
 
     getProductDetailPrice() {
         return cy.get(".inventory_details_price");
+    }
+
+    clickProductButton(productName, buttonText) {
+        cy.get('[data-test="inventory-item"]').contains(productName).parent().parent().contains(buttonText).click();
+    }
+
+    getCartBadge() {
+        return cy.get('[data-test="shopping-cart-badge"]');
     }
 }
 
