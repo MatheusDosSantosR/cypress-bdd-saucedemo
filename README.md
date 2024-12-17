@@ -46,7 +46,7 @@ Este repositório contém a automação de testes para o site [SauceDemo](https:
 ### **Passos para Instalar**
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/cypress-bdd-saucedemo.git
+   git clone https://github.com/MatheusDosSantosR/cypress-bdd-saucedemo.git
    cd cypress-bdd-saucedemo
    ```
 
